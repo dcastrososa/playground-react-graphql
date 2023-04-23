@@ -1,22 +1,20 @@
 module.exports = {
-  extends: ["airbnb-typescript", "plugin:react-hooks/recommended", "plugin:prettier/recommended"],
+  extends: [
+    'react-app',
+    'react-app/jest',
+    'plugin:prettier/recommended',
+    'prettier/@typescript-eslint',
+    'prettier/react',
+  ],
+  settings: {},
   parserOptions: {
-    project: "./tsconfig.json",
+    project: './tsconfig.json',
   },
   rules: {
-    "react/jsx-props-no-spreading": "off",
-    "import/prefer-default-export": "off",
-    "max-len": ["error", { code: 232 }],
-    "@typescript-eslint/naming-convention": "off",
-    "import/named": "off",
-    "no-underscore-dangle": "off",
-    "react/require-default-props": "off",
-    "no-nested-ternary": "off",
-    "no-param-reassign": "off",
-    "no-console": "off",
-    "no-plusplus": [2, { allowForLoopAfterthoughts: true }],
-    "react-hooks/exhaustive-deps": "warn",
-    "react/prop-types": "off",
-    "react/react-in-jsx-scope": "off"
+    '@typescript-eslint/no-unused-vars': 'off',
+    'import/no-anonymous-default-export': 'off',
+    'array-callback-return': 'off',
+    'prettier/prettier': 'off',
   },
+  plugins: ['prettier'],
 };
