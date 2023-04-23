@@ -33,14 +33,14 @@ export function ProductListComponent() {
     AddItemToOrderVariables
   >(ADD_ITEM_TO_ORDER);
   const { data: activeOrderData, loading: loadingActiveOrder } = useQuery<{
-    activeOrder: ActiveOrder;
+    activeOrder?: ActiveOrder;
   }>(GET_ACTIVE_ORDER);
   const [activeSavingProducts, setActiveSavingProducts] = useState<string[]>(
     []
   );
 
   useEffect(() => {
-    if (!loadingActiveOrder && activeOrderData?.activeOrder.total) {
+    if (!loadingActiveOrder && activeOrderData?.activeOrder?.total) {
       saveItemStorage(
         'TOTAL',
         activeOrderData.activeOrder.total.toString() || '0'
