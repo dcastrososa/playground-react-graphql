@@ -1,0 +1,10 @@
+/node_modules
+.idea/
+/public
+/docs
+/config
+/build
+/scripts
+.eslintrc.js
+jest.config.js
+src/setupTests.ts
